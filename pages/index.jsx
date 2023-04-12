@@ -56,8 +56,8 @@ export async function getServerSideProps({ res }) {
 
 	const headers = [menuItemHeaders, postHeaders];
 	setOutgoingHeaders({ headers, res });
-	console.log(headers);
-
+	console.log(headers.x-pantheon-styx-hostname);
+	console.log(headers.x-pantheon-styx-hostname);
 	return {
 		props: {
 			menuItems,
