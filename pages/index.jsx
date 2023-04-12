@@ -49,14 +49,16 @@ export default function Home({ menuItems, posts }) {
 	);
 }
 
-export async function getServerSideProps({ res }) {
+export async function getServerSideProps({ res, req }) {
 	console.log("headers here!");
 	
 	const { menuItems, menuItemHeaders } = await getFooterMenu();
 	const { posts, headers: postHeaders } = await getLatestPosts(12);
 
 	const headers = [menuItemHeaders, postHeaders];
-	console.dir(headers, { depth: null })
+	console.dir(headers, { depth: null });
+	console.log("req headers-------");
+	console.dir(req.headers, { depth: null });
 	setOutgoingHeaders({ headers, res });
 	return {
 		props: {
