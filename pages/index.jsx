@@ -57,6 +57,7 @@ export async function getServerSideProps({ res }) {
 
 	const headers = [menuItemHeaders, postHeaders];
 	console.log(headers);
+	console.log(headers.server);
 	setOutgoingHeaders({ headers, res });
 	return {
 		props: {
