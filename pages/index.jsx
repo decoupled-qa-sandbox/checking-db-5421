@@ -16,7 +16,7 @@ export default function Home({ menuItems, posts }) {
 					href="https://nextjs.org"
 				>
 					Next.js!
-				</a> PR2!
+				</a> PR2! 3
 			</h1>
 			<div className="text-2xl">
 				<div className="bg-black text-white rounded flex items-center justify-center p-4">
